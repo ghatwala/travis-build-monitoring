@@ -12,7 +12,7 @@ travis login -X -e "https://travis.com/api" -g $GHE_TOKEN
 
 #Commit a new file
 rm -rf ./$PROJECT_NAME
-git clone https://$USER:$GHE_TOKEN@https://github.com/$PROJECT_NAME.git
+git clone https://$USER:$GHE_TOKEN@github.com/$PROJECT_NAME.git
 git clone git@github.com:$PROJECT
 cd ./$PROJECT_NAME
 git pull --rebase
