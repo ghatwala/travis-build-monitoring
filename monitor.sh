@@ -14,9 +14,9 @@ travis login -X -e "https://travis.com/api" -g $GHE_TOKEN
 rm -rf ./$PROJECT_NAME
 git clone https://$USER:$GHE_TOKEN@github.com/$PROJECT_NAME.git
 git clone git@github.com:$PROJECT
-cd ./$PROJECT_NAME
+cd ./$PROJECT
 git pull --rebase
-RANDOM_STRING=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+RANDOM_STRING=$(cat /dev/urandom | env LC_CTYPE=C tr -dc a-zA-Z0-9 | head -c 16; echo)
 echo $RANDOM_STRING >> ./strings
 git add ./strings
 git commit -s -m "Add new entry called $RANDOM_STRING"
