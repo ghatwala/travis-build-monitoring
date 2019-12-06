@@ -7,8 +7,8 @@ GHE_TOKEN=$3
 PROJECT_NAME=$USER/$PROJECT
 
 #Configure access to Travis using GHE
-travis endpoint --set-default -X -e "https://travis.com/api"
-travis login -X -e "https://travis.com/api" -g $GHE_TOKEN
+travis endpoint --set-default -X -e "https://api.travis-ci.com"
+travis login -X -e "https://api.travis-ci.com" -g $GHE_TOKEN
 
 #Commit a new file
 rm -rf ./$PROJECT_NAME
