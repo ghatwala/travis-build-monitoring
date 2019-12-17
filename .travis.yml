@@ -1,0 +1,13 @@
+matrix:
+  include:
+    - env: TRAVIS_TYPE=Externsl
+      os: linux
+      arch: ppc64le
+      dist: bionic
+    - env: TRAVIS_TYPE=Internal
+      os: linux
+      arch: ppc64le
+      dist: bionic
+      
+script:
+    - ./monitor.sh
