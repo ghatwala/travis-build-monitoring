@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 #rpsene/dummy_04
 USER=$1
